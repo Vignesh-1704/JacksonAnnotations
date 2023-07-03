@@ -1,13 +1,23 @@
 package com.m2p.JacksonAnnotations.entity;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 @Data
-public class Employee {
+@Getter
+@Setter
+@ToString
+public class Employee{
     private String name;
     private String city;
     private String department;
     private String designation;
+
+    public Employee(){
+        super();
+    }
 
     public Employee(String name, String city, String department, String designation) {
         this.name = name;
